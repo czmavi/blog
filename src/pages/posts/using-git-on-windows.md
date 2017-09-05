@@ -1,7 +1,7 @@
 ---
 path: '/using-git-on-windows'
 title: 'Using git on Windows'
-date: 2017-06-07
+date: 2017-09-05
 tags: 
  - Git
  - Windows
