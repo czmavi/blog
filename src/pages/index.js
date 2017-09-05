@@ -16,7 +16,7 @@ export default ({ data }) => {
               key={post.frontmatter.path}
               path={post.frontmatter.path}
               title={post.frontmatter.title}
-              date={post.frontmatter.date}
+              date={new Date(post.frontmatter.date)}
               excerpt={post.excerpt}
             />
           );
@@ -27,13 +27,15 @@ export default ({ data }) => {
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 250)
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date
             path
           }
         }

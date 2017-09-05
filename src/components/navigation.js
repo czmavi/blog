@@ -17,7 +17,6 @@ export default () => (
         <ul className="nav navbar-nav navbar-right">
           <li><Link to="/about">About</Link></li>
           <li><Link to="/tags">Tags</Link></li>
-          <li><Link to="/archive">Posts</Link></li>
         </ul>
       </div>
     </div>

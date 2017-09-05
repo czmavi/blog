@@ -16,7 +16,7 @@ export default ({ data, pathContext }) => {
               key={post.frontmatter.path}
               path={post.frontmatter.path}
               title={post.frontmatter.title}
-              date={post.frontmatter.date}
+              date={new Date(post.frontmatter.date)}
               excerpt={post.excerpt}
             />
           );
@@ -29,6 +29,7 @@ export const pageQuery = graphql`
 query TagByNameQuery($name: String!) {
   allMarkdownRemark(
     filter: { frontmatter: { tags: { in: [$name] } } }
+    sort: { order: DESC, fields: [frontmatter___date] }
   ) {
     totalCount
     edges {
@@ -36,7 +37,7 @@ query TagByNameQuery($name: String!) {
         excerpt(pruneLength: 250)
         frontmatter {
           title
-          date(formatString: "MMMM DD, YYYY")
+          date
           path
         }
       }
