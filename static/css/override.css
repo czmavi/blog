@@ -1,0 +1,68 @@
+.intro-header {
+  background-image: url("/img/header_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 350px;
+}
+
+.navbar .navbar-header > a.navbar-brand {
+  color: #FFFFFF;
+}
+
+.navbar .navbar-header > a.navbar-brand:hover {
+  color: #C3C2C2;
+}
+
+.navbar > ul.navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #C3C2C2;
+}
+
+ul.navbar-nav > li > a:hover, #navbar > ul.navbar-nav > li > a:hover {
+  color: #FFFFFF;
+}
+
+ul.navbar-nav > li:nth-last-of-type(n+2) a {
+  border-right: 1px solid #FFF;
+}
+
+footer.footer {
+  background-color: #000;
+  color: #C3C2C2;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+footer.footer p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+footer.footer p a {
+  color: #C3C2C2;
+}
+
+footer.footer p a:hover {
+  color: #FFFFFF;
+}
+
+footer.footer p.logo {
+  font-size: 24px;
+}
+
+footer.footer p.copyright {
+  font-size: 10px;
+  text-align: left;
+}
+
+footer.footer p.contact_icons a {
+  margin-right: 8px;
+}
+
+footer.footer p.contact_icons a img {
+  cursor: pointer;
+}
