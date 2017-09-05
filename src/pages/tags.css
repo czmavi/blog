@@ -1,0 +1,16 @@
+.tags {
+  min-height: 20em;
+}
+
+.tags .btn {
+  margin-bottom: 6px;
+}
+.tags .btn-sm {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+.tags .btn-xs {
+  font-size: 12px;
+  padding: 1px 5px;
+}
