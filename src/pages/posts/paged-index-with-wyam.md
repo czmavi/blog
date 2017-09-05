@@ -1,6 +1,7 @@
 ---
 path: '/paged-index-with-wyamio'
 date: 2017-03-06
+draft: false
 title: Paged index with Wyam.io
 tags: 
  - 'Wyam'

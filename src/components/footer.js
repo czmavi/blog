@@ -9,7 +9,7 @@ export default () => (
           <p className="copyright">
             &copy; {new Date().getFullYear()} Martin Vích
                     <br />
-            <a href="/feed.rss"><i className="fa fa-rss"></i> RSS Feed</a> | <a href="/feed.atom"><i className="fa fa-rss"></i> Atom Feed</a>
+            <a href="/rss.xml"><i className="fa fa-rss"></i> RSS Feed</a> | <a href="https://github.com/czmavi/blog"><i className="fa fa-github"></i> Source</a>
           </p>
         </div>
         <div className="col-md-4">
