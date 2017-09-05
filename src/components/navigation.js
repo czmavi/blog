@@ -5,7 +5,7 @@ import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import './navigation.css';
 
 export default () => (
-  <Navbar fixedTop={true} default={true} collapseOnSelect={true}>
+  <Navbar default={true} collapseOnSelect={true}>
     <Navbar.Header>
       <Navbar.Brand>
         <Link className="navbar-brand" to="/">Martin Vích</Link>
@@ -13,14 +13,14 @@ export default () => (
       <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
-      <Nav pullRight={true}>
-        <NavItem>
+      <ul className="nav navbar-nav navbar-right">
+        <li role="presentation">
           <Link to="/about">About</Link>
-        </NavItem>
-        <NavItem>
+        </li>
+        <li role="presentation">
           <Link to="/tags">Tags</Link>
-        </NavItem>
-      </Nav>
+        </li>
+      </ul>
     </Navbar.Collapse>
   </Navbar>
 );
