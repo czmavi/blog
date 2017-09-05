@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './header.css';
+
 export default () => (
   <header className="intro-header" id="intro-header">
     <div className="container">
