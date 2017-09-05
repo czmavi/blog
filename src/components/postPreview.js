@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const PostPreview = ({ path, title, date, excerpt}) => (
   <div className="post-preview">
     <h2 className="post-title">
-      <Link to={path}>{title}</Link>
+      <Link to={'posts' + path}>{title}</Link>
     </h2>
     <p className="post-meta">{date.toLocaleDateString()}</p>
     <p>{excerpt}</p>

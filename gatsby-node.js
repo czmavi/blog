@@ -45,7 +45,8 @@ const createPostPages = (createPage, posts, siteTitle) => (
   posts
     .forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
+        pathValue: node.frontmatter.path,
+        path: 'posts' + node.frontmatter.path,
         component: blogPostTemplate,
         context: {
           siteTitle,

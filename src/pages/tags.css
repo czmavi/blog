@@ -1,3 +1,7 @@
+.tags {
+  min-height: 20em;
+}
+
 .tags .btn {
   margin-bottom: 6px;
 }
