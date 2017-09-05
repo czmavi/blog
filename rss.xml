@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Martin Vích's blog]]></title><description><![CDATA[Personal blog of one IT guy.]]></description><link>https://www.martinvich.net</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 05 Sep 2017 20:31:23 GMT</lastBuildDate><atom:link href="https://www.martinvich.net/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Using git on Windows]]></title><description><![CDATA[Motivation For a long time I was using Visual Studio with TFS to control my code. So when company I was working at that time wanted to move...]]></description><link>https://www.martinvich.net/postsundefined</link><guid isPermaLink="true">https://www.martinvich.net/postsundefined</guid><dc:creator><![CDATA[Martin Vích]]></dc:creator><content:encoded>&lt;h1&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;For a long time I was using Visual Studio with TFS to control my code. So when company I was working at that time wanted to move to git I continued to use integreated tools as well. And in a small team it was fine, basicly I couldn&apos;t tell the difference from TFS. But then I moved to other company with larger team that was starting to use &lt;a href=&quot;https://www.atlassian.com/git/tutorials/comparing-workflows#gitflow-workflow&quot;&gt;Gitflow&lt;/a&gt; and Visual Studio tools started to get painfull to use. I started to use Atlassian SourceTree but after they had a streak of several patches that caused massive lagging of that application I decided that it&apos;s time to try out using command line git.
+It was rough at the beginning since I was never much of a command line user but after some time and some tweaking it became my preffered way of using Git on Windows.&lt;/p&gt;
+&lt;h1&gt;Tools&lt;/h1&gt;
+&lt;p&gt;I&apos;m using Powershell but you can use any shell you like. As a console I&apos;m using ConEmu for Visual Studio projects and build in terminal for Visual Studio Code.
+Here&apos;s list of tools and plugins I found are worth using&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://conemu.github.io/&quot;&gt;ConEmu&lt;/a&gt;- alternative advanced console for Windows. It has much better features than cmd and is better with displaying colors than PowerShellISE.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Microsoft/Git-Credential-Manager-for-Windows&quot;&gt;Credential Manager for Windows&lt;/a&gt; - Utility that will store git credentials to Windows credential store so there is no need to provide them for each operation with the remote. It has great support for all main git repositoriies. It even supports multi factor authetication with Visual Studio Team Services if you&apos;re using it (you should be doing that whenever it&apos;s possible)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://psget.net/&quot;&gt;PsGet&lt;/a&gt; - PowerShell module installer. This is optional I use it to install PS plugins but you can do that manually&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dahlbyk/posh-git&quot;&gt;Posh-git&lt;/a&gt; - PowerShell module that displays current branch. This is great plugit that will show you on which branch you&apos;re currently working on, branch sync status and how many file changes have you made since last commit&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lzybkr/PSReadLine&quot;&gt;PSReadLine&lt;/a&gt; - Powershell module that will add autocomplete to git so you don&apos;t have to write whole branch names etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Installation&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Install ConEmu&lt;/li&gt;
+&lt;li&gt;Open ConEmu, go to settings window. There in \Startup\Tasks add a new task (+ button), name it Powershell and set command as Powershell.exe. Then go to the \Startup and in the startup options select Specified named task\Powershell. This will set Powershell console as the default one.&lt;/li&gt;
+&lt;li&gt;If you don&apos;t want to install PowerShell modules manually install PsGet.&lt;/li&gt;
+&lt;li&gt;Install Posh-git with command &lt;code&gt;PowerShellGet\Install-Module posh-git -Scope CurrentUser&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Update Posh-git with command &lt;code&gt;Update-Module posh-git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add Posh-git to your profile with command &lt;code&gt;Add-PoshGitToProfile&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install PSReadLine with command &lt;code&gt;Install-Module PSReadLine&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Go to your Documents folder and from there to WindowsPowerShell. There will be Microsoft.PowerShell_profile.ps1. Open it in file editor and add:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;\# Load posh-git example profile
+. &apos;C:\Users\{your user name}\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1&apos;
+
+\# Load PSReadline
+if ($host.Name -eq &apos;ConsoleHost&apos;) {
+  Import-Module PSReadline
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will automatically load your plugins when you start new Powershell window&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Git Credential Store utility&lt;/li&gt;
+&lt;li&gt;Restart ConEmu. Now when you&apos;re at a location which is a git repository, you should see a branch name at the end of the line. It&apos;s colors are explained at posh-git readme. It will look like this: &lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\mvich\Source\Repos\myproject [develop]&gt; 
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title><![CDATA[Paged index with Wyam.io]]></title><description><![CDATA[I've decided to create new blog to share experiences I have with various peaces of software and since I'm doing a lot of .NET development...]]></description><link>https://www.martinvich.net/postsundefined</link><guid isPermaLink="true">https://www.martinvich.net/postsundefined</guid><dc:creator><![CDATA[Martin Vích]]></dc:creator><content:encoded>&lt;p&gt;I&apos;ve decided to create new blog to share experiences I have with various peaces of software and since I&apos;m doing a lot of .NET development &lt;a href=&quot;http://wyam.io&quot;&gt;Wyam.io&lt;/a&gt; project caught my eye. It comes with everything I expected to need for a &quot;begginers&quot; blogging tool so I decided to give it a try. &lt;/p&gt;
+&lt;p&gt;It&apos;s really easy to use but there was one thing that I wanted to adjust. And that is how &quot;index&quot; page works by default. I didn&apos;t want it to show first few top post but instead I want it to have paging itself, not just on archive page. Using paginate in a separate pipeline is quite easy but problem is that you cannot just copy input/index.cshtml from the &lt;a href=&quot;https://github.com/Wyamio/Wyam/tree/develop/examples/Pagination&quot;&gt;pagination example&lt;/a&gt; into your root index.cshtml. That would break your pipelines from the blog recipe.&lt;/p&gt;
+&lt;p&gt;Fortunately with just few adjustments it&apos;s possible to make it work that way.&lt;/p&gt;
+&lt;h2&gt;Config.wyam&lt;/h2&gt;
+&lt;p&gt;First we&apos;ll make some changes to &lt;code&gt;config.wyam&lt;/code&gt;. We need to create a setting for the number of posts per page and also add new pipeline that will be responsible for creating paged index.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Settings[&quot;PostsPerPage&quot;] = 3;
+
+Pipelines.Add(&quot;Archive&quot;,
+    ReadFiles(&quot;index.cshtml&quot;),
+    Paginate(3,
+        Documents(BlogPipelines.Posts),
+        OrderBy((doc, ctx) =&gt; doc.Metadata.Get&amp;#x3C;DateTime&gt;(&quot;Published&quot;))
+    ),
+    Razor(),
+    WriteFiles(string.Format(&quot;{0}.html&quot;, @doc.Get&amp;#x3C;int&gt;(&quot;CurrentPage&quot;)))
+);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Index.cshtml&lt;/h2&gt;
+&lt;p&gt;Now configuration is done and we can move to the index file. We could copy &lt;a href=&quot;https://github.com/Wyamio/Wyam/blob/develop/examples/Pagination/input/index.cshtml&quot;&gt;posts index&lt;/a&gt; into application root but problem with that is that the Blog template won&apos;t work anymore since the new index file expects pagination metedata which Blog pipelines aren&apos;t providing. Also the example index doesn&apos;t use _Layout and other things we probably want to keep. So instead let&apos;s copy &lt;a href=&quot;https://github.com/Wyamio/Wyam/blob/develop/themes/Blog/CleanBlog/index.cshtml&quot;&gt;index from the CleanBlog theme&lt;/a&gt; and add paging there.&lt;/p&gt;
+&lt;p&gt;First we&apos;ll focus on the part where the posts are rendered&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@{
+    int page = Model.ContainsKey(&quot;CurrentPage&quot;) ? Model.Get&amp;#x3C;int&gt;(&quot;CurrentPage&quot;) : 1;
+    int postsPerPage = Context.Get&amp;#x3C;int&gt;(&quot;PostsPerPage&quot;);
+    int totalPages = (Documents[BlogKeys.Posts].Count() / postsPerPage) + ((Documents[BlogKeys.Posts].Count() % postsPerPage) &gt; 0 ? 1 : 0);
+    bool first = true;
+    foreach(IDocument doc in Documents[BlogKeys.Posts].Skip((page - 1) * postsPerPage).Take(postsPerPage))
+    {
+        // You don&apos;t have to change individual posts rendering
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will ensure that when index file gets processed by Blog pipeline it will have reasonable default metadata and won&apos;t throw any exception.&lt;/p&gt;
+&lt;p&gt;Once that&apos;s done the only thing left is to add navigation between pages. You can add it right after the post rendering block&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;#x3C;div&gt;
+        @for(int p = 1 ; p &amp;#x3C;= totalPages ; p++)
+        {
+            &amp;#x3C;span&gt;
+                @if(p == page)
+                {
+                    &amp;#x3C;strong&gt;Page @p&amp;#x3C;/strong&gt;
+                }   
+                else
+                {
+                    string pageLink = p == 1 ? &quot;/&quot; : p.ToString();
+                    &amp;#x3C;a href=&quot;@pageLink&quot;&gt;Page @p&amp;#x3C;/a&gt;
+                }
+                &amp;#x26;nbsp;&amp;#x26;nbsp;
+            &amp;#x3C;/span&gt;
+        }
+    &amp;#x3C;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will add Page 1 to Page N links under your posts. You can also adjust this logic to show Older / New posts links.&lt;/p&gt;
+&lt;p&gt;I hope that this will help you with adjusting your Wyam site.&lt;/p&gt;</content:encoded></item></channel></rss>
