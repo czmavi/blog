@@ -1,10 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-export default function Template({
+export default ({
   data,
   pathContext,
-}) {
+}) => {
   const { markdownRemark: post } = data;
   return (
     <div className="blog-post-container">

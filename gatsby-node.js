@@ -50,6 +50,7 @@ const createPostPages = (createPage, posts, siteTitle) => (
         component: blogPostTemplate,
         context: {
           siteTitle,
+          pathValue: node.frontmatter.path,
         }
       });
     }
@@ -78,6 +79,7 @@ const createTagPages = (createPage, posts, siteTitle) => {
       context: {
         siteTitle,
         tagName: key,
+        name: key,
       }
     })
   ));
