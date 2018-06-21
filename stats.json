@@ -13,12 +13,16 @@
       "component---src-templates-tag-category-js-9ca9115231740c91b032.js.map"
     ],
     "path---tags": [
-      "path---tags-48f8bef912587a560bfd.js",
-      "path---tags-48f8bef912587a560bfd.js.map"
+      "path---tags-9f2775bba91b28155f23.js",
+      "path---tags-9f2775bba91b28155f23.js.map"
     ],
     "path---": [
       "path----77f5a612744acc119c81.js",
       "path----77f5a612744acc119c81.js.map"
+    ],
+    "path---posts-how-to-install-ruby-on-rails-on-mac": [
+      "path---posts-how-to-install-ruby-on-rails-on-mac-9c80ada11cc7cdebcc49.js",
+      "path---posts-how-to-install-ruby-on-rails-on-mac-9c80ada11cc7cdebcc49.js.map"
     ],
     "path---posts-paged-index-with-wyamio": [
       "path---posts-paged-index-with-wyamio-72b531ac6a2b5cebf219.js",
@@ -41,8 +45,12 @@
       "path---posts-using-git-on-windows-bd8b329e3de038796ae4.js.map"
     ],
     "path---index": [
-      "path---index-5ab21ea013450a32091b.js",
-      "path---index-5ab21ea013450a32091b.js.map"
+      "path---index-44c38d79a25486610d16.js",
+      "path---index-44c38d79a25486610d16.js.map"
+    ],
+    "path---tags-rails": [
+      "path---tags-rails-4d911d01f627cb60cacd.js",
+      "path---tags-rails-4d911d01f627cb60cacd.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -71,9 +79,9 @@
       "path---tags-git-d5bec265f59039cef34a.js.map"
     ],
     "app": [
-      "app-978785db40f8b7be366c.js",
+      "app-160086dcad66db6a7486.js",
       "build-js-styles.css",
-      "app-978785db40f8b7be366c.js.map",
+      "app-160086dcad66db6a7486.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
@@ -87,6 +95,10 @@
     "path---about": [
       "path---about-a0e39f21c11f6a62c5ab.js",
       "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---tags-ruby": [
+      "path---tags-ruby-9578271155f2dd76e8a9.js",
+      "path---tags-ruby-9578271155f2dd76e8a9.js.map"
     ]
   }
 }
