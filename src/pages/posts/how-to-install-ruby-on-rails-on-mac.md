@@ -8,7 +8,7 @@ tags:
  - Rails
 ---
 
-- Install [https://brew.sh](homebrew)
+- Install [homebrew](https://brew.sh)
 - run `xcode-select --install`
 - Install & init rbenv with `brew install rbenv && brew install rbenv && rbenv init`
 - List available ruby versions with `rbenv install -l`

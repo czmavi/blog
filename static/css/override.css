@@ -42,3 +42,7 @@ footer.footer p.contact_icons a {
 footer.footer p.contact_icons a img {
   cursor: pointer;
 }
+
+.blog-post-content a {
+  text-decoration: underline;
+}
