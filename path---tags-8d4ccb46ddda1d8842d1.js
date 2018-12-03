@@ -1,0 +1,2 @@
+webpackJsonp([55702396619907],{485:function(t,a){t.exports={data:{allMarkdownRemark:{edges:[{node:{frontmatter:{tags:["Wyam"]}}},{node:{frontmatter:{tags:["Ruby","Rails"]}}},{node:{frontmatter:{tags:["Git","Windows","Powershell"]}}},{node:{frontmatter:{tags:["Git"]}}}]}},pathContext:{}}}});
+//# sourceMappingURL=path---tags-8d4ccb46ddda1d8842d1.js.map
