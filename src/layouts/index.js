@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
 import Navigation from '../components/navigation';
@@ -13,8 +12,8 @@ const TemplateWrapper = ({ children, data }) =>
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'application-name', content: 'Martin Vích\'s blog' },
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Full stack developer journal' },
+        { name: 'keywords', content: 'react, .net, git, windows, mac, javascript' },
         { name: 'msapplication-tooltip', content: 'Martin Vích\'s blog' },
         { name: 'msapplication-starturl', content: '/' },
       ]}
